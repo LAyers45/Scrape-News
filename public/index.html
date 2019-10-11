@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Scraping With Mongoose</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
         body {
-            background-color: #F2F6D0
+            background-image: url("images/newspaper.jpg");
         }
 
         #wrapper {
@@ -26,13 +28,19 @@
         #notes {
             float: right;
             width: 30%;
+            background-color: #3d3c3c;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 25px;
+            color: white;
         }
 
         textarea,
         input {
             display: block;
             width: 100%;
-            background-color: #FCF5C7;
+            background-color: #8a8888;
+            margin-bottom: 5px;
         }
 
         input {
@@ -46,31 +54,42 @@
         }
 
         .navbar {
-            background-color: blue;
+            border-bottom: 5px solid red;
+        }
+
+        #articles {
+            background-color: #8a8888;
+            padding-left: 5px;
+        }
+
+        #Subtitle {
+            background-color: #3d3c3c;
+            width: 60%;
+            color: white;
         }
     </style>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a class="navbar-brand" href="#">ScrapeNews</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Features</a>
-                <a class="nav-item nav-link" href="#">Pricing</a>
-                <a class="nav-item nav-link disabled" href="#">Disabled</a>
+                <a class="nav-item nav-link" href="/scrape">Scrape</a>
+                <a class="nav-item nav-link" href="#">Saved Articles</a>
+                <a class="nav-item nav-link" href="/articles">Raw Articles</a>
             </div>
         </div>
     </nav>
     <div id="wrapper">
-        <h2><i>Where we find the news and scrape it.</i></h2>
+        <div id="Subtitle">
+            <h2><i>Where we find the news and scrape it.</i></h2>
+        </div>
         <div id="articles"></div>
         <div id="notes"></div>
     </div>
